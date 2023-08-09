@@ -152,7 +152,7 @@ func parseCIDRNetIP(section *ini.Section, keyName string) ([]netip.Addr, error) 
 
 		addr := prefix.Addr()
 		if prefix.Bits() != addr.BitLen() {
-			return nil, errors.New("interface address subnet should be /32 for IPv4 and /128 for IPv6")
+			//return nil, errors.New("interface address subnet should be /32 for IPv4 and /128 for IPv6")
 		}
 
 		ips = append(ips, addr)
