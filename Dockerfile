@@ -10,7 +10,6 @@ RUN make
 FROM gcr.io/distroless/static-debian11:nonroot
 COPY --from=build /usr/src/wireproxy/wireproxy /usr/bin/wireproxy
 
-VOLUME [ "/etc/wireproxy"]
 ENTRYPOINT [ "/usr/bin/wireproxy" ]
 CMD [ "--config", "/etc/wireproxy/config" ]
 
